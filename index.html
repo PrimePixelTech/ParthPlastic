@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parth Plasto Pack</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="preloader" id="preloader">
+      <div class="spinner">
+        <img src="./assets/images/logo.png" alt="Loading..." />
+      </div>
+    </div>
+    <header class="header" id="navbar">
+      <div class="logo">
+        <h1 class="logo-name">
+          <img src="./assets/images/logo.png" class="header-logo" alt="Logo" />
+        </h1>
+        <nav>
+          <ul class="header-ul">
+            <li class="header-li"><a href="#" class="li-a">Home</a></li>
+            <li class="header-li"><a href="#" class="li-a">About Us</a></li>
+            <li class="header-li dropdown-container">
+              <a href="#" class="li-a">Products</a>
+              <ul class="dropdown">
+                <li><a href="#">Product 1</a></li>
+                <li><a href="#">Product 2</a></li>
+                <li><a href="#">Product 3</a></li>
+              </ul>
+            </li>
+            <li class="header-li"><a href="#" class="li-a">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div class="toggle">
+          <i class="fa-solid fa-bars" id="menu-icon"></i>
+        </div>
+      </div>
+    </header>
+      <!-- Banner Section -->
+      
+  <main class="main-content">
+    <section class="slideshow">
+      <div class="slideshow-inner">
+        <div class="slides">
+          <div class="slide is-active">
+            <div class="image-container">
+              <img src="./assets/images/banner1.png" alt="Slide 1" class="image" />
+            </div>
+          </div>
+          <div class="slide">
+            <div class="image-container">
+              <img src="./assets/images/Banner2.png" alt="Slide 2" class="image" />
+            </div>
+          </div>
+          <div class="slide">
+            <div class="image-container">
+              <img src="./assets/images/Banner3.png" alt="Slide 3" class="image" />
+            </div>
+          </div>
+        </div>
+
+        <div class="pagination">
+          <div class="item is-active"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+        </div>
+
+        <div class="arrows">
+          <div class="arrow prev"><i class="fas fa-chevron-left"></i></div>
+          <div class="arrow next"><i class="fas fa-chevron-right"></i></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="./assets/javascript/script.js"></script>
+  </body>
+</html>
