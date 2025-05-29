@@ -14,9 +14,6 @@
     z-index: 9999;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     padding: 10px 30px;
-
-
-    
 }
 
 .logo {
@@ -126,7 +123,7 @@
 @media (max-width: 768px) {
     .header-ul {
         flex-direction: column;
-        background-color: #fef7ad8e;
+        background-color: #fef7ad;
         position: fixed;
         top: 70px;
         right: -100%;
@@ -158,4 +155,7 @@
     .header-ul {
         width: 70%;
     }
+    .toggle {
+    font-size: 18px;
+}
 }
