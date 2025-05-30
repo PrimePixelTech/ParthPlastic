@@ -67,37 +67,40 @@ $('.owl-carousel').owlCarousel({
       }
     });
 
-// const slides = document.querySelectorAll('.slide');
-// const dots = document.querySelectorAll('.pagination .item');
-// const prevArrow = document.querySelector('.arrow.prev');
-// const nextArrow = document.querySelector('.arrow.next');
 
-// let currentIndex = 0;
 
-// function showSlide(index) {
-//   slides.forEach((slide, i) => {
-//     slide.classList.toggle('is-active', i === index);
-//     dots[i].classList.toggle('is-active', i === index);
-//   });
-//   currentIndex = index;
-// }
-
-// dots.forEach((dot, index) => {
-//   dot.addEventListener('click', () => showSlide(index));
-// });
-
-// prevArrow.addEventListener('click', () => {
-//   const newIndex = (currentIndex - 1 + slides.length) % slides.length;
-//   showSlide(newIndex);
-// });
-
-// nextArrow.addEventListener('click', () => {
-//   const newIndex = (currentIndex + 1) % slides.length;
-//   showSlide(newIndex);
-// });
-
-// // Optional: auto-slide every 5 seconds
-// setInterval(() => {
-//   const newIndex = (currentIndex + 1) % slides.length;
-//   showSlide(newIndex);
-// }, 4000);
+// Scroll animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
